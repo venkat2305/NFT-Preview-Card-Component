@@ -51,13 +51,15 @@ p{
 
 /* to reduce the size of the image to fit the card , first set the width of img to 100% and then give the width to the container */
 
-.image-equilibrium{
+
+
+.cube{
     width: 100%;
     border-radius: 15px;
     cursor: pointer;
 }
 
-.image-equilibrium:hover{
+.cube:hover{
     opacity: 0.8;
     /* background-image:url("images\icon-view.svg") ; */
 }
