@@ -16,12 +16,16 @@
 }
 
 /* if we have to give background color to whole page, give the background color to the body */
+/* we should give min-height to container , width to the card. if we give them to another among body , container , card there's a difference in the output. Understand why?  */
 
 body{
     background-color: var(--Very-dark-blue-main-BG);
     font-family: 'Outfit', sans-serif;
-    font-size: 18px;
     
+}
+p{
+    font-size: 18px;
+    font-weight: 300    ;
 }
 
 .container{
@@ -29,14 +33,19 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    
 }
 
 .card{
-    padding: 15px;
+    padding: 25px;
     background-color: var(--Very-dark-blue-card-BG);
     border-radius: 15px;
-    width: 400px;
+    max-width: 350px;
     
+    /* why is it not working */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
     
 }
 
@@ -45,26 +54,88 @@ body{
 .image-equilibrium{
     width: 100%;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.image-equilibrium:hover{
+    opacity: 0.8;
+    /* background-image:url("images\icon-view.svg") ; */
 }
 
 .title{
     color: white;
+    padding: 15px 0 0 0;
+    
+}
+
+.item-number{
+    cursor: pointer;
+}
+
+.item-number:hover{
+    opacity: 0.8;
 }
 
 .description{
-    color: var(--Cyan);
+    color: var(--Soft-blue);
     font-weight: 300;
+    margin: 20px 0;
 }
 
 .details{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .eth{
     display: flex;
+    color: var(--Cyan);
+    
+}
+
+.eth img{
+    margin-right: 10px;
 }
 
 .days-left{
     display: flex;
+    color: var(--Soft-blue);
 }
+
+.days-left img{
+    margin-right: 10px;
+}
+
+hr{
+    border-color:var(--Very-dark-blue-line) ;
+}
+
+
+.footer{
+    color: var(--Soft-blue);
+    display: flex;
+    align-items: center;
+    margin: 15px 0 10px 0;
+
+}
+
+.footer img{
+    width: 10%;
+    border-radius: 50%;     
+    /* border radius is 50% to make it to white circular border */
+    border: 2px solid #FFF;
+    margin-right: 15px;
+}
+
+.name{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.name:hover{
+    opacity: 0.8;
+}
+
+/* BOX SHADOW - ADD IT LATER! */
+/* ADD IMAGE OVERLAY */
