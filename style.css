@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* if we have to give background color to whole page, give the background color to the body */
+
+body{
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.card{
+    padding: 15px;
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: 15px;
+    
+}
+
+/* to reduce the size of the image to fit the card , first set the width of img to 100% and then give the width to the container */
+
+.image-equilibrium{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.title{
+    color: white;
+}
+
+.description{
+    color: var(--Cyan);
+    font-weight: 300;
+}
+
+.details{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.eth{
+    display: flex;
+}
+
+.days-left{
+    display: flex;
+}
