@@ -16,6 +16,8 @@ inset
 CSS image overlay
 box shadow
 
+fix hover with psuedo elements 
+
 reference code - https://github.com/A-C-Sai/nft-preview-card-component/blob/main/styles.css
 
 
