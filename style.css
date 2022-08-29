@@ -1,175 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-:root{
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
-    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
-    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
-    --Very-dark-blue-line: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* if we have to give background color to whole page, give the background color to the body */
 /* we should give min-height to container , width to the card. if we give them to another among body , container , card there's a difference in the output. Understand why?  */
 
-body{
-    background-color: var(--Very-dark-blue-main-BG);
-    font-family: 'Outfit', sans-serif;
-    
+body {
+  background-color: var(--Very-dark-blue-main-BG);
+  font-family: "Outfit", sans-serif;
 }
 
-p{
-    font-size: 18px;
-    font-weight: 300    ;
+p {
+  font-size: 18px;
+  font-weight: 300;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.card{
-    padding: 25px;
-    background-color: var(--Very-dark-blue-card-BG);
-    border-radius: 15px;
-    max-width: 350px;
-    
-    /* why is it not working */
-    /* display: flex;
+.card {
+  padding: 25px;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 15px;
+  max-width: 350px;
+
+  /* why is it not working */
+  /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
-    
 }
 
 /* to reduce the size of the image to fit the card , first set the width of img to 100% and then give the width to the container */
 /* when we give border radius to top-img its only applying the border radius to the but not to the image itself. why? */
 /* Hovers indicate interactivity so they must be attached to something interactive like an anchor tag or button. */
 
-.img-container{
-    width: 100%;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;       /* because of this the child items will be at the center horizontally always */
-    position: relative;
-    
+.img-container {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* because of this the child items will be at the center horizontally always */
+  position: relative;
 }
 
-.NFT-img img{
-    width: 100%;
-    border-radius: 15px;
-    /* when it comes to width , radius of an image, apply them directly to the image. dont apply them to parent or to div of the image */
+.NFT-img img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  /* when it comes to width , radius of an image, apply them directly to the image. dont apply them to parent or to div of the image */
 }
 
-.view-img{      /* we are applying styles to the div not directly to the image. so img is child of the parent*/
-    background-color: rgba(0, 255, 247, 0.5);
-    position: absolute;
-    border-radius: 15px;
-    width: 100%;    /*we have given width and height 100% after setting the parent as relative*/
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+.view-img {
+  /* we are applying styles to the div not directly to the image. so img is child of the parent*/
+  background-color: rgba(0, 255, 247, 0.5);
+  position: absolute;
+  border-radius: 15px;
+  width: 100%; /*we have given width and height 100% after setting the parent as relative*/
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
 
-.view-img:hover{
-    opacity: 1;
+.view-img:hover {
+  opacity: 1;
 }
 
-
-
-
-
-
-.title{
-    color: white;
-    padding: 15px 0 0 0;
-    
+.title {
+  color: white;
+  padding: 15px 0 0 0;
 }
 
-.item-number{
-    /* color is not being inherited from the title */
-    color: white;
+.item-number {
+  /* color is not being inherited from the title */
+  color: white;
 }
 
 /* cursor:pointer; is used if the elements are non interactive, if the elements are interactive then the curson comes up automatically */
 
-.item-number:hover{
-    opacity: 0.8;
+.item-number:hover {
+  opacity: 0.8;
 }
 
-.description{
-    color: var(--Soft-blue);
-    font-weight: 300;
-    margin: 20px 0;
+.description {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  margin: 20px 0;
 }
 
-.details{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-.eth{
-    display: flex;
-    color: var(--Cyan);
-    
+.eth {
+  display: flex;
+  color: var(--Cyan);
 }
 
-.eth img{
-    margin-right: 10px;
+.eth img {
+  margin-right: 10px;
 }
 
-.days-left{
-    display: flex;
-    color: var(--Soft-blue);
+.days-left {
+  display: flex;
+  color: var(--Soft-blue);
 }
 
-.days-left img{
-    margin-right: 10px;
+.days-left img {
+  margin-right: 10px;
 }
 
-hr{
-    border-color:var(--Very-dark-blue-line) ;
+hr {
+  border-color: var(--Very-dark-blue-line);
 }
 
-
-.footer{
-    color: var(--Soft-blue);
-    display: flex;
-    align-items: center;
-    margin: 15px 0 10px 0;
-
+.footer {
+  color: var(--Soft-blue);
+  display: flex;
+  align-items: center;
+  margin: 15px 0 10px 0;
 }
 
-.footer img{
-    width: 10%;
-    border-radius: 50%;     
-    /* border radius is 50% to make it to white circular border */
-    border: 2px solid #FFF;
-    margin-right: 15px;
+.footer img {
+  width: 10%;
+  border-radius: 50%;
+  /* border radius is 50% to make it to white circular border */
+  border: 2px solid #fff;
+  margin-right: 15px;
 }
 
-.name{
-    color: var(--Cyan);
-    
+.name {
+  color: var(--Cyan);
 }
 
-.name:hover{
-    opacity: 0.8;
+.name:hover {
+  opacity: 0.8;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 /* BOX SHADOW - ADD IT LATER! */
