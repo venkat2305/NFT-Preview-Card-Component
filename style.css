@@ -23,6 +23,7 @@ body{
     font-family: 'Outfit', sans-serif;
     
 }
+
 p{
     font-size: 18px;
     font-weight: 300    ;
@@ -33,7 +34,6 @@ p{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
 }
 
 .card{
@@ -50,47 +50,45 @@ p{
 }
 
 /* to reduce the size of the image to fit the card , first set the width of img to 100% and then give the width to the container */
+/* when we give border radius to top-img its only applying the border radius to the but not to the image itself. why? */
+/* Hovers indicate interactivity so they must be attached to something interactive like an anchor tag or button. */
 
-.top-img{
+.img-container{
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* because of this the child items will be at the center horizontally always */
     position: relative;
     
 }
 
-/* when we give border radius to top-img its only applying the border radius to the but not to the image itself. why?
- */
-
-.cube{
+.NFT-img img{
     width: 100%;
     border-radius: 15px;
-    cursor: pointer;
+    /* when it comes to width , radius of an image, apply them directly to the image. dont apply them to parent or to div of the image */
 }
 
-/* Hovers indicate interactivity so they must be attached to something interactive like an anchor tag or button. */
-
-
-
-
-
-.overlay{
+.view-img{      /* we are applying styles to the div not directly to the image. so img is child of the parent*/
+    background-color: rgba(0, 255, 247, 0.5);
     position: absolute;
-    top: 0;
-    background-color: hsl(178, 100%, 50% , 60%);
-    width: 100%;
+    border-radius: 15px;
+    width: 100%;    /*we have given width and height 100% after setting the parent as relative*/
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    border-radius: 15px;
 }
 
-.overlay img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.overlay:hover{
+.view-img:hover{
     opacity: 1;
 }
+
+
+
+
+
 
 .title{
     color: white;
@@ -99,10 +97,11 @@ p{
 }
 
 .item-number{
-    cursor: pointer;
     /* color is not being inherited from the title */
     color: white;
 }
+
+/* cursor:pointer; is used if the elements are non interactive, if the elements are interactive then the curson comes up automatically */
 
 .item-number:hover{
     opacity: 0.8;
@@ -162,7 +161,7 @@ hr{
 
 .name{
     color: var(--Cyan);
-    cursor: pointer;
+    
 }
 
 .name:hover{
